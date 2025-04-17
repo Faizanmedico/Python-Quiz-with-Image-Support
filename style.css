@@ -1,0 +1,210 @@
+:root {
+    --bg-color: #dae4f3;
+    --text-color: #333;
+    --container-bg: white;
+    --container-shadow: rgba(0, 0, 0, 0.1);
+    --primary-color: #4285f4;
+    --success-color: #34a853;
+    --warning-color: #fbbc05;
+    --danger-color: #ea4335;
+    --border-color: #ddd;
+}
+
+body.dark-mode {
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --container-bg: #1e1e1e;
+    --container-shadow: rgba(0, 0, 0, 0.3);
+    --primary-color: #8ab4f8;
+    --success-color: #81c995;
+    --warning-color: #fdd663;
+    --danger-color: #f28b82;
+    --border-color: #444;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: var(--container-bg);
+    border-radius: 10px;
+    box-shadow: 0 0 10px var(--container-shadow);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.quiz-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.progress {
+    font-weight: bold;
+}
+
+.timer {
+    font-weight: bold;
+    color: var(--danger-color);
+}
+
+.question-container {
+    margin-bottom: 30px;
+}
+
+.question {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.question-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    display: block;
+}
+
+.options {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.option {
+    padding: 12px 15px;
+    background-color: var(--container-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.option:hover {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.option.correct {
+    background-color: var(--success-color);
+    border-color: var(--success-color);
+    color: white;
+}
+
+.option.incorrect {
+    background-color: var(--danger-color);
+    border-color: var(--danger-color);
+    color: white;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.2s;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    opacity: 0.9;
+}
+
+.btn-primary:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.result-container {
+    text-align: center;
+}
+
+.score {
+    font-size: 1.5rem;
+    margin: 20px 0;
+}
+
+.percentage {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.feedback {
+    font-size: 1.2rem;
+    margin: 20px 0;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 30px 0;
+}
+
+/* Dark Mode Toggle */
+.dark-mode-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.toggle-btn {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.toggle-btn:hover {
+    opacity: 0.9;
+}
+
+.toggle-icon {
+    font-size: 18px;
+}
+
+.hide {
+    display: none;
+}
+
+
+

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Python Quiz</title>
+    <style>
+       
+    </style>
+</head>
+<body>
+    <!-- Dark Mode Toggle Button -->
+    <div class="dark-mode-toggle">
+        <button id="dark-mode-toggle" class="toggle-btn">
+            <span class="toggle-icon">🌙</span>
+            <span>Dark Mode</span>
+        </button>
+    </div>
+
+    <div class="container">
+        <!-- Start Screen -->
+        <div id="start-screen">
+            <h1>Python Quiz</h1>
+            <p>Test your Python knowledge with this quiz. You'll have 15 seconds per question. Good luck!</p>
+            <div class="controls">
+                <button id="start-btn" class="btn btn-primary">Start Quiz</button>
+            </div>
+        </div>
+
+        <!-- Quiz Screen -->
+        <div id="quiz-screen" class="hide">
+            <div class="quiz-header">
+                <div class="progress">Question <span id="current-question">1</span>/<span id="total-questions">25</span></div>
+                <div class="timer">Time Left: <span id="time-left">15</span>s</div>
+            </div>
+
+            <div class="question-container">
+                <img id="question-image" class="question-image hide" src="" alt="Question image">
+                <div id="question" class="question"></div>
+                <div id="options" class="options"></div>
+            </div>
+
+            <div class="controls">
+                <button id="next-btn" class="btn btn-primary" disabled>Next</button>
+            </div>
+        </div>
+
+        <!-- Results Screen -->
+        <div id="results-screen" class="hide">
+            <h1>Python Quiz</h1>
+            <div class="result-container">
+                <h2>Result:</h2>
+                <div class="score"><span id="correct-answers">20</span> of <span id="total-questions-result">25</span></div>
+                <div class="percentage" id="percentage">80%</div>
+                <div class="feedback" id="feedback">Almost! Study a little more and take the test again!</div>
+                <div class="time-spent">Time Spent: <span id="time-spent">72:00</span></div>
+            </div>
+
+            <div class="action-buttons">
+                <button id="check-answers-btn" class="btn btn-primary">Check your answers</button>
+                <button id="try-again-btn" class="btn btn-primary">Try Again</button>
+                <button id="back-to-quizzes-btn" class="btn">Back to Quizzes</button>
+            </div>
+
+            <div class="share-section">
+                <div class="share-text">Share your score:</div>
+                <div class="share-buttons">
+                    <button class="btn share-btn twitter">Twitter</button>
+                    <button class="btn share-btn facebook">Facebook</button>
+                    <button class="btn share-btn linkedin">LinkedIn</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="myScript.js"></script>
+
+    
+</body>
+</html>
